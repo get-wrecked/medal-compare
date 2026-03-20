@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { allComparisons } from '../data/comparisons';
+---
+
+<Layout
+  title="Medal.tv Comparisons - Find the Best Game Clipping Software"
+  description="Compare Medal.tv against OBS, Xbox Game Bar, ShadowPlay, and more. Feature-by-feature breakdowns to help you pick the best game recording and clipping tool."
+  canonicalPath="/"
+>
+  <Header />
+
+  <main>
+    <!-- Hero - matching medal.tv/features style -->
+    <section class="relative overflow-hidden bg-medal-surface">
+      <!-- Background pattern overlay -->
+      <div class="absolute inset-0 opacity-10" style="background-image: url('https://cdn.medal.tv/assets/next/img/medal-logo/logo-with-text-horizontal.93342752.webp'); background-repeat: repeat; background-size: 200px; transform: rotate(-15deg) scale(1.5);"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-medal-surface/80 via-medal-surface/90 to-medal-surface pointer-events-none"></div>
+
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-28 pb-16 sm:pb-20 text-center">
+        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold font-mono leading-tight">
+          Compare Us
+        </h1>
+        <p class="mt-6 text-xl sm:text-2xl lg:text-3xl text-medal-primary max-w-3xl mx-auto leading-snug font-bold">
+          See why most gamers use Medal
+        </p>
+      </div>
+    </section>
+
+    <!-- Comparison cards -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {allComparisons.map((comp) => (
+          <a
+            href={`/${comp.slug}/`}
+            class="group rounded-xl border border-medal-border bg-medal-surface hover:bg-medal-surface-light hover:border-medal-primary/30 transition-all p-6"
+          >
+            <h2 class="text-xl font-bold font-mono mb-2 group-hover:text-medal-primary transition-colors">
+              Medal Vs. {comp.competitor}
+            </h2>
+            <span class="inline-flex items-center gap-1 mt-4 text-sm text-medal-primary font-medium">
+              See comparison
+              <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

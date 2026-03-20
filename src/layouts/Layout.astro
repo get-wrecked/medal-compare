@@ -1,0 +1,100 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  faqSchema?: { question: string; answer: string }[];
+}
+
+const { title, description, canonicalPath, faqSchema } = Astro.props;
+const canonicalUrl = `https://medal.tv/compare${canonicalPath}`;
+const ogUrl = canonicalUrl;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:site_name" content="Medal.tv Comparisons" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FAQ Schema -->
+    {faqSchema && faqSchema.length > 0 && (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqSchema.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: faq.answer,
+            },
+          })),
+        })}
+      />
+    )}
+  </head>
+  <body class="min-h-screen">
+    <slot />
+
+    <!-- Sticky CTA - appears after scrolling -->
+    <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 z-40 translate-y-full transition-transform duration-300 bg-medal-surface/95 backdrop-blur-md border-t border-medal-border">
+      <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
+        <p class="text-sm text-medal-text-muted hidden sm:block">Never miss a moment. See what your friends are all using.</p>
+        <a
+          href="https://medal.tv/download"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-5 py-2 bg-medal-primary hover:bg-medal-primary-dark text-black text-sm font-semibold rounded-lg transition-colors"
+        >
+          Download Medal
+        </a>
+      </div>
+    </div>
+
+    <script>
+      const stickyCta = document.getElementById('sticky-cta');
+      let shown = false;
+      window.addEventListener('scroll', () => {
+        const shouldShow = window.scrollY > 600;
+        if (shouldShow && !shown) {
+          stickyCta?.classList.remove('translate-y-full');
+          shown = true;
+        } else if (!shouldShow && shown) {
+          stickyCta?.classList.add('translate-y-full');
+          shown = false;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  /* Medal Design Tokens — from Figma Tokens System */
+
+  /* Brand */
+  --color-medal-primary: #BEF837;
+  --color-medal-primary-dark: #99DE04;
+  --color-medal-secondary: #FF4828;
+  --color-medal-secondary-dark: #FE2B11;
+  --color-medal-tertiary: #40ACFF;
+  --color-medal-quaternary: #9183F6;
+
+  /* Backgrounds */
+  --color-medal-bg: #000000;
+  --color-medal-surface: #161617;
+  --color-medal-surface-light: #1F1F20;
+
+  /* Foreground / Text */
+  --color-medal-text: #FFFFFF;
+  --color-medal-text-muted: #B3B1B6;
+  --color-medal-text-subtle: #8E8E8E;
+  --color-medal-text-faint: #5E5C61;
+
+  /* Borders / Strokes */
+  --color-medal-border: rgba(255, 255, 255, 0.16);
+  --color-medal-border-subtle: rgba(255, 255, 255, 0.08);
+
+  /* Semantic */
+  --color-medal-success: #01D28E;
+  --color-medal-danger: #EB4D55;
+  --color-medal-warning: #F98807;
+  --color-medal-info: #1485FF;
+
+  /* Legacy aliases (for components using old names) */
+  --color-medal-orange: #FF4828;
+  --color-medal-orange-dark: #FE2B11;
+  --color-medal-green: #01D28E;
+  --color-medal-red: #EB4D55;
+
+  /* Typography */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-medal-bg);
+  color: var(--color-medal-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accordion animation */
+details summary {
+  cursor: pointer;
+  list-style: none;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details[open] summary .chevron {
+  transform: rotate(180deg);
+}
+.chevron {
+  transition: transform 0.2s ease;
+}

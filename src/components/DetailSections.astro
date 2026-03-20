@@ -1,0 +1,77 @@
+---
+import type { DetailSection } from '../data/comparisons';
+
+interface Props {
+  sections: DetailSection[];
+}
+
+const { sections } = Astro.props;
+---
+
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+  <div class="space-y-28">
+    {sections.map((section, i) => {
+      const hasMedia = section.image || section.video || section.embedUrl;
+      const mediaOnRight = i % 2 === 0;
+
+      const isPortraitVideo = section.video && section.video.includes('mobile');
+      const isMobileImage = section.image && section.image.includes('mobile');
+
+      return hasMedia ? (
+        <div class:list={[
+          'flex flex-col gap-6 items-center',
+          mediaOnRight ? 'md:flex-row' : 'md:flex-row-reverse',
+        ]}>
+          <div class="flex-1">
+            <h2 class="text-xl sm:text-2xl font-bold font-mono mb-4">{section.title}</h2>
+            <p class="text-medal-text-muted leading-relaxed text-base [&_a]:text-medal-primary [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-medal-primary-dark [&_strong]:text-medal-primary [&_strong]:font-semibold" set:html={section.content}></p>
+          </div>
+          <div class:list={[
+            'flex items-center shrink-0',
+            isPortraitVideo ? 'md:w-40' : isMobileImage ? 'md:w-3/5' : 'flex-1',
+          ]}>
+            {section.video && (
+              <div class="rounded-xl overflow-hidden border border-medal-border w-full">
+                <video
+                  src={section.video}
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  class="w-full"
+                ></video>
+              </div>
+            )}
+            {section.image && !section.video && (
+              <div class="rounded-xl overflow-hidden border border-medal-border w-full">
+                <img
+                  src={section.image}
+                  alt={section.imageAlt || section.title}
+                  class="w-full"
+                  loading="lazy"
+                />
+              </div>
+            )}
+            {section.embedUrl && !section.video && !section.image && (
+              <div class="rounded-xl overflow-hidden border border-medal-border aspect-video w-full">
+                <iframe
+                  src={section.embedUrl}
+                  class="w-full h-full"
+                  frameborder="0"
+                  allowfullscreen
+                  loading="lazy"
+                  title={section.title}
+                ></iframe>
+              </div>
+            )}
+          </div>
+        </div>
+      ) : (
+        <div class="max-w-3xl">
+          <h2 class="text-xl sm:text-2xl font-bold font-mono mb-4">{section.title}</h2>
+          <p class="text-medal-text-muted leading-relaxed text-base [&_a]:text-medal-primary [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-medal-primary-dark [&_strong]:text-medal-primary [&_strong]:font-semibold" set:html={section.content}></p>
+        </div>
+      );
+    })}
+  </div>
+</section>

@@ -1,0 +1,90 @@
+---
+import { allPages } from '../data/comparisons';
+
+interface Props {
+  currentSlug?: string;
+}
+
+const { currentSlug } = Astro.props;
+
+// Top nav: only show top 3 competitors
+const navSlugs = ['medal-vs-obs', 'medal-vs-xbox-game-bar', 'medal-vs-shadowplay'];
+const navPages = allPages.filter((p) => navSlugs.includes(p.slug));
+---
+
+<header class="border-b border-medal-border bg-medal-bg/90 backdrop-blur-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-14">
+      <!-- Logo — links to medal.tv -->
+      <a href="https://medal.tv" class="flex items-center shrink-0">
+        <img
+          src="https://cdn.medal.tv/assets/next/img/medal-logo/logo-with-text-horizontal.93342752.webp"
+          alt="Medal.tv"
+          class="h-6"
+          loading="eager"
+        />
+      </a>
+
+      <!-- Main site nav — matches medal.tv header -->
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="https://medal.tv/blog" class="text-sm text-medal-text-muted hover:text-medal-text transition-colors">Blog</a>
+        <a href="https://medal.tv/features" class="text-sm text-medal-text-muted hover:text-medal-text transition-colors">Features</a>
+        <a href="https://medal.tv/games" class="text-sm text-medal-text-muted hover:text-medal-text transition-colors">Games</a>
+        <a href="/" class="text-sm text-medal-text hover:text-medal-primary transition-colors font-medium">Compare</a>
+        <a href="https://support.medal.tv" class="text-sm text-medal-text-muted hover:text-medal-text transition-colors">Support</a>
+        <a
+          href="https://medal.tv/download"
+          class="px-4 py-1.5 bg-medal-primary hover:bg-medal-primary-dark text-black text-sm font-semibold rounded-lg transition-colors"
+        >
+          Download
+        </a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden p-2 rounded-lg text-medal-text-muted hover:text-medal-text hover:bg-medal-surface-light transition-colors"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+
+    <!-- Mobile nav -->
+    <nav id="mobile-menu" class="hidden md:hidden pb-4">
+      <div class="flex flex-col gap-1">
+        <a href="https://medal.tv/blog" class="px-3 py-2 rounded-lg text-sm text-medal-text-muted hover:text-medal-text transition-colors">Blog</a>
+        <a href="https://medal.tv/features" class="px-3 py-2 rounded-lg text-sm text-medal-text-muted hover:text-medal-text transition-colors">Features</a>
+        <a href="https://medal.tv/games" class="px-3 py-2 rounded-lg text-sm text-medal-text-muted hover:text-medal-text transition-colors">Games</a>
+        <div class="border-t border-medal-border my-1"></div>
+        {navPages.map((page) => (
+          <a
+            href={`/${page.slug}/`}
+            class:list={[
+              'px-3 py-2 rounded-lg text-sm font-medium transition-colors',
+              currentSlug === page.slug
+                ? 'bg-medal-primary/15 text-medal-primary'
+                : 'text-medal-text-muted hover:text-medal-text',
+            ]}
+          >
+            Medal vs {page.competitor}
+          </a>
+        ))}
+        <a href="/" class="px-3 py-2 rounded-lg text-sm text-medal-text-muted hover:text-medal-text transition-colors">
+          All Comparisons
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

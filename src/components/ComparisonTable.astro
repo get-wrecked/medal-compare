@@ -1,0 +1,77 @@
+---
+import type { ComparisonRow } from '../data/comparisons';
+
+interface Props {
+  rows: ComparisonRow[];
+  competitorName: string;
+}
+
+const { rows, competitorName } = Astro.props;
+---
+
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+  <h2 class="text-xl sm:text-2xl font-bold font-mono mb-8">
+    Feature-by-Feature Comparison
+  </h2>
+
+  <div class="rounded-2xl border border-medal-border overflow-hidden bg-medal-surface">
+    <!-- Table header -->
+    <div class="grid grid-cols-[1fr_2fr_2fr] bg-medal-surface-light border-b border-medal-border">
+      <div class="px-4 sm:px-6 py-4 text-sm font-semibold text-medal-text-muted">Feature</div>
+      <div class="px-4 sm:px-6 py-4 text-sm font-semibold text-medal-primary text-center">Medal</div>
+      <div class="px-4 sm:px-6 py-4 text-sm font-semibold text-medal-text-muted text-center">{competitorName}</div>
+    </div>
+
+    <!-- Rows -->
+    {rows.map((row, i) => (
+      <div
+        class:list={[
+          'grid grid-cols-[1fr_2fr_2fr] border-b border-medal-border/50 last:border-0',
+          i % 2 === 0 ? 'bg-medal-surface' : 'bg-medal-surface/50',
+        ]}
+      >
+        <div class="px-4 sm:px-6 py-4 text-sm font-medium text-medal-text flex items-center">
+          {row.feature}
+        </div>
+        <div class="px-4 sm:px-6 py-4 text-sm text-center flex items-center justify-center gap-2">
+          {row.medalWins === true && (
+            <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-medal-success/15 text-medal-success shrink-0">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+          )}
+          {row.medalWins === false && (
+            <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-medal-danger/15 text-medal-danger shrink-0">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </span>
+          )}
+          <span class:list={[
+            row.medalWins === true ? 'text-medal-success' : row.medalWins === false ? 'text-medal-text-muted' : 'text-medal-text',
+          ]}>{row.medal}</span>
+        </div>
+        <div class="px-4 sm:px-6 py-4 text-sm text-center flex items-center justify-center gap-2">
+          {row.competitorWins === true && (
+            <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-medal-success/15 text-medal-success shrink-0">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+          )}
+          {row.competitorWins === false && (
+            <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-medal-danger/15 text-medal-danger shrink-0">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </span>
+          )}
+          <span class:list={[
+            row.competitorWins === true ? 'text-medal-success' : row.competitorWins === false ? 'text-medal-text-muted' : 'text-medal-text',
+          ]}>{row.competitor}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

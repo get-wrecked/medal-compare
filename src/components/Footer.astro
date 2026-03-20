@@ -1,0 +1,91 @@
+---
+import { allPages } from '../data/comparisons';
+
+interface Props {
+  currentSlug?: string;
+}
+
+const { currentSlug } = Astro.props;
+---
+
+<footer class="border-t border-medal-border bg-medal-surface mt-8">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Brand -->
+      <div>
+        <a href="https://medal.tv">
+          <img
+            src="https://cdn.medal.tv/assets/next/img/medal-logo/logo-with-text-horizontal.93342752.webp"
+            alt="Medal.tv"
+            class="h-6"
+            loading="lazy"
+          />
+        </a>
+        <p class="mt-3 text-sm text-medal-text-muted leading-relaxed">
+          The easiest way to record, edit, and share gaming clips. Used by millions of gamers worldwide.
+        </p>
+        <a
+          href="https://medal.tv"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block mt-4 text-sm text-medal-primary hover:text-medal-primary-dark transition-colors"
+        >
+          Visit medal.tv &rarr;
+        </a>
+      </div>
+
+      <!-- Comparison Pages -->
+      <div>
+        <h3 class="text-sm font-semibold text-medal-text uppercase tracking-wider mb-4">Comparisons</h3>
+        <ul class="space-y-2">
+          {allPages.map((page) => (
+            <li>
+              <a
+                href={`/${page.slug}/`}
+                class:list={[
+                  'text-sm transition-colors',
+                  currentSlug === page.slug
+                    ? 'text-medal-primary'
+                    : 'text-medal-text-muted hover:text-medal-text',
+                ]}
+              >
+                Medal vs {page.competitor}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="text-sm font-semibold text-medal-text uppercase tracking-wider mb-4">Resources</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="https://medal.tv/download" target="_blank" rel="noopener noreferrer" class="text-sm text-medal-text-muted hover:text-medal-text transition-colors">
+              Download Medal
+            </a>
+          </li>
+          <li>
+            <a href="https://medal.tv/games" target="_blank" rel="noopener noreferrer" class="text-sm text-medal-text-muted hover:text-medal-text transition-colors">
+              Supported Games
+            </a>
+          </li>
+          <li>
+            <a href="https://medal.tv/pricing" target="_blank" rel="noopener noreferrer" class="text-sm text-medal-text-muted hover:text-medal-text transition-colors">
+              Pricing
+            </a>
+          </li>
+          <li>
+            <a href="https://support.medal.tv" target="_blank" rel="noopener noreferrer" class="text-sm text-medal-text-muted hover:text-medal-text transition-colors">
+              Support
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-10 pt-6 border-t border-medal-border text-center text-xs text-medal-text-muted">
+      &copy; {new Date().getFullYear()} Medal.tv &mdash; All rights reserved.
+    </div>
+  </div>
+</footer>
