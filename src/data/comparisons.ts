@@ -157,34 +157,34 @@ export const allComparisons: ComparisonPage[] = [
         title: 'Light-Speed Instant Replays Captured',
         content:
           'Medal lets you hit a clutch 1v4 in Valorant or a ceiling shot in Rocket League, press F8, and the last 15 seconds are saved. Done. OBS has a Replay Buffer, but you have to dig through settings to configure it. Medal was built for capturing plays and sharing them in under 10 seconds. <a href="https://medal.tv/features">See all Medal features</a>.',
-        video: '/compare/images/medal-instant-replay.mp4',
+        video: '/images/medal-instant-replay.mp4',
       },
       {
         title: 'Never Miss a Moment with Smart Auto-Clips',
         content:
           'Medal allows you to play your game at ease with <a href="https://medal.tv/auto-clipping">auto-clipping</a> present in the background. Your best moments with your friends in <a href="https://medal.tv/games/valorant">Valorant</a>, <a href="https://medal.tv/games/fortnite">Fortnite</a>, <a href="https://medal.tv/games/apex-legends">Apex Legends</a>, <a href="https://medal.tv/games/cs2">CS2</a>, and <a href="https://medal.tv/games/call-of-duty-warzone">Call of Duty</a> are saved by the time you\'re back in the lobby. OBS only records manually.',
-        image: '/compare/images/medal-auto-clip.png',
+        image: '/images/medal-auto-clip.png',
         imageAlt: 'Medal auto-clipping a kill in Apex Legends without pressing any button',
       },
       {
         title: 'Too Focused? Your Voice Is All You Need',
         content:
           "Just say \"clip that\" and Medal captures the moment instantly, hands-free, and distraction-free. OBS does not offer voice features.",
-        image: '/compare/images/medal-editor-demo.gif',
+        image: '/images/medal-editor-demo.gif',
         imageAlt: 'Medal voice command clipping a gaming highlight hands-free',
       },
       {
         title: 'Easily Edit and Share on All Platforms',
         content:
           'Medal lets you instantly edit and share links of clips to Discord, TikTok, Reddit, and anywhere else. You can also follow friends, see their clips, and discover clips you\'re in. OBS saves files locally with no sharing or social features built in.',
-        video: '/compare/images/medal-share-clip.mp4',
+        video: '/images/medal-share-clip.mp4',
         embedUrl: 'https://medal.tv/games/valorant/clips/mkI53EXbBMVaS1bLn?theater=true',
       },
       {
         title: 'The Only Recorder with a Mobile App',
         content:
           'Medal provides a mobile app and a mobile recorder, so you can record, manage, comment, and share clips on the go. Share highlights directly to TikTok, Discord, or anywhere else from your phone. OBS is desktop-only.',
-        image: '/compare/images/medal-mobile-combined.png',
+        image: '/images/medal-mobile-combined.png',
         imageAlt: 'Medal mobile app - browse clips, tap to clip, play any mobile game',
       },
       {
@@ -324,34 +324,34 @@ export const allComparisons: ComparisonPage[] = [
         title: 'Light-Speed Instant Replays Captured',
         content:
           'Medal lets you press F8 after a clutch 1v4 in <a href="https://medal.tv/games/valorant">Valorant</a> or an insane flick in <a href="https://medal.tv/games/cs2">CS2</a> and the last 15 seconds are saved instantly. Xbox Game Bar has a replay feature, but it caps at 1080p 60fps and requires you to dig into Windows settings to enable it. Medal was built for speed - capture, edit, and share in under 10 seconds. <a href="https://medal.tv/features">See all Medal features</a>.',
-        video: '/compare/images/medal-instant-replay.mp4',
+        video: '/images/medal-instant-replay.mp4',
       },
       {
         title: 'Never Miss a Moment with Smart Auto-Clips',
         content:
           'Medal\'s <a href="https://medal.tv/auto-clipping">auto-clipping</a> runs quietly in the background and saves your best plays automatically. Kills, aces, and clutch moments in <a href="https://medal.tv/games/valorant">Valorant</a>, <a href="https://medal.tv/games/fortnite">Fortnite</a>, <a href="https://medal.tv/games/apex-legends">Apex Legends</a>, <a href="https://medal.tv/games/cs2">CS2</a>, and <a href="https://medal.tv/games/call-of-duty-warzone">Call of Duty</a> are clipped by the time you are back in the lobby. Xbox Game Bar has no auto-clipping at all - every clip requires a manual hotkey.',
-        image: '/compare/images/medal-auto-clip.png',
+        image: '/images/medal-auto-clip.png',
         imageAlt: 'Medal auto-clipping a kill in Apex Legends without pressing any button',
       },
       {
         title: 'Too Focused? Your Voice Is All You Need',
         content:
           'Just say "clip that" and Medal captures the moment instantly - hands-free and distraction-free. Perfect for ranked matches in <a href="https://medal.tv/games/rocket-league">Rocket League</a> or <a href="https://medal.tv/games/fortnite">Fortnite</a> when your hands are busy. Xbox Game Bar does not support voice commands for clipping.',
-        image: '/compare/images/medal-editor-demo.gif',
+        image: '/images/medal-editor-demo.gif',
         imageAlt: 'Medal voice command clipping a gaming highlight hands-free',
       },
       {
         title: 'Easily Edit and Share on All Platforms',
         content:
           'Medal gives you an instant link for every clip that embeds on Discord, TikTok, Reddit, and anywhere else - no file uploading, no compression. You can also follow friends, see their clips, and discover clips you are in. Xbox Game Bar saves files to a local folder with no editor and no sharing workflow built in.',
-        video: '/compare/images/medal-share-clip.mp4',
+        video: '/images/medal-share-clip.mp4',
         embedUrl: 'https://medal.tv/games/valorant/clips/mkI53EXbBMVaS1bLn?theater=true',
       },
       {
         title: 'The Only Recorder with a Mobile App',
         content:
           'Medal has a full mobile app on iOS and Android so you can record mobile games, browse clips, edit, and share from your phone. Share highlights directly to TikTok, Discord, or anywhere else on the go. Xbox Game Bar is desktop-only with no mobile support whatsoever.',
-        image: '/compare/images/medal-mobile-combined.png',
+        image: '/images/medal-mobile-combined.png',
         imageAlt: 'Medal mobile app - browse clips, tap to clip, play any mobile game',
       },
       {
@@ -462,34 +462,34 @@ export const allComparisons: ComparisonPage[] = [
         title: 'Light-Speed Instant Replays Captured',
         content:
           'Medal lets you press F8 after a clutch ace in <a href="https://medal.tv/games/valorant">Valorant</a> or a nasty flick in <a href="https://medal.tv/games/cs2">CS2</a> and the last 15 seconds are saved. Done. ShadowPlay has Instant Replay too, but it only works on NVIDIA GPUs and requires GeForce Experience running. Medal works on NVIDIA, AMD, and Intel - no extra software needed. <a href="https://medal.tv/features">See all Medal features</a>.',
-        video: '/compare/images/medal-instant-replay.mp4',
+        video: '/images/medal-instant-replay.mp4',
       },
       {
         title: 'Never Miss a Moment with Smart Auto-Clips',
         content:
           'Medal\'s <a href="https://medal.tv/auto-clipping">auto-clipping</a> saves your best plays in the background without any button press. Kills, aces, and clutch rounds in <a href="https://medal.tv/games/valorant">Valorant</a>, <a href="https://medal.tv/games/fortnite">Fortnite</a>, <a href="https://medal.tv/games/apex-legends">Apex Legends</a>, <a href="https://medal.tv/games/cs2">CS2</a>, and <a href="https://medal.tv/games/call-of-duty-warzone">Call of Duty</a> are clipped before you are back in the lobby. ShadowPlay Highlights only works with a limited list of titles and has not expanded much.',
-        image: '/compare/images/medal-auto-clip.png',
+        image: '/images/medal-auto-clip.png',
         imageAlt: 'Medal auto-clipping a kill in Apex Legends without pressing any button',
       },
       {
         title: 'Too Focused? Your Voice Is All You Need',
         content:
           'Just say "clip that" and Medal captures the moment instantly - hands-free and distraction-free. Perfect for clutch rounds in <a href="https://medal.tv/games/rocket-league">Rocket League</a> or <a href="https://medal.tv/games/fortnite">Fortnite</a> when your hands are occupied. ShadowPlay does not support voice-activated clipping.',
-        image: '/compare/images/medal-editor-demo.gif',
+        image: '/images/medal-editor-demo.gif',
         imageAlt: 'Medal voice command clipping a gaming highlight hands-free',
       },
       {
         title: 'Easily Edit and Share on All Platforms',
         content:
           'Medal gives you an instant link for every clip that embeds on Discord, TikTok, Reddit, and anywhere else. You can also follow friends, see their clips, and discover clips you are in. ShadowPlay saves raw files to your hard drive with no editor and no sharing - you would need a separate app just to trim the clip down.',
-        video: '/compare/images/medal-share-clip.mp4',
+        video: '/images/medal-share-clip.mp4',
         embedUrl: 'https://medal.tv/games/valorant/clips/mkI53EXbBMVaS1bLn?theater=true',
       },
       {
         title: 'The Only Recorder with a Mobile App',
         content:
           'Medal has a full mobile app on iOS and Android so you can record mobile games, browse clips, edit, and share from your phone. Share highlights directly to TikTok, Discord, or anywhere else on the go. ShadowPlay is desktop-only and locked to NVIDIA hardware.',
-        image: '/compare/images/medal-mobile-combined.png',
+        image: '/images/medal-mobile-combined.png',
         imageAlt: 'Medal mobile app - browse clips, tap to clip, play any mobile game',
       },
       {
@@ -634,34 +634,34 @@ export const allComparisons: ComparisonPage[] = [
         title: 'Light-Speed Instant Replays Captured',
         content:
           'Medal lets you press F8 after a nasty ace in <a href="https://medal.tv/games/valorant">Valorant</a> or a crazy redirect in <a href="https://medal.tv/games/rocket-league">Rocket League</a> and the last 15 seconds are saved instantly. Outplayed also has a hotkey replay, but it requires the full Overwolf platform running in the background. Medal is standalone - no extra software, no overlays you did not ask for. <a href="https://medal.tv/features">See all Medal features</a>.',
-        video: '/compare/images/medal-instant-replay.mp4',
+        video: '/images/medal-instant-replay.mp4',
       },
       {
         title: 'Never Miss a Moment with Smart Auto-Clips',
         content:
           'Medal\'s <a href="https://medal.tv/auto-clipping">auto-clipping</a> detects kills, aces, and clutch moments in <a href="https://medal.tv/games/valorant">Valorant</a>, <a href="https://medal.tv/games/fortnite">Fortnite</a>, <a href="https://medal.tv/games/apex-legends">Apex Legends</a>, <a href="https://medal.tv/games/cs2">CS2</a>, and <a href="https://medal.tv/games/call-of-duty-warzone">Call of Duty</a> and saves them automatically. Outplayed hooks into game events through Overwolf for similar detection, but Medal runs standalone and tends to be more consistent across a wider range of games.',
-        image: '/compare/images/medal-auto-clip.png',
+        image: '/images/medal-auto-clip.png',
         imageAlt: 'Medal auto-clipping a kill in Apex Legends without pressing any button',
       },
       {
         title: 'Too Focused? Your Voice Is All You Need',
         content:
           'Just say "clip that" and Medal captures the moment instantly - hands-free and distraction-free. Perfect for intense ranked matches in <a href="https://medal.tv/games/apex-legends">Apex Legends</a> or <a href="https://medal.tv/games/cs2">CS2</a> when your hands are busy. Outplayed does not offer voice-activated clipping.',
-        image: '/compare/images/medal-editor-demo.gif',
+        image: '/images/medal-editor-demo.gif',
         imageAlt: 'Medal voice command clipping a gaming highlight hands-free',
       },
       {
         title: 'Easily Edit and Share on All Platforms',
         content:
           'Medal gives you an instant link for every clip that embeds on Discord, TikTok, Reddit, and anywhere else - no file uploading, no compression. You can also follow friends, see their clips, and discover clips you are in. Outplayed saves clips locally and sharing means manually uploading or going through Overwolf\'s ecosystem.',
-        video: '/compare/images/medal-share-clip.mp4',
+        video: '/images/medal-share-clip.mp4',
         embedUrl: 'https://medal.tv/games/valorant/clips/mkI53EXbBMVaS1bLn?theater=true',
       },
       {
         title: 'The Only Recorder with a Mobile App',
         content:
           'Medal has a full mobile app on iOS and Android so you can record mobile games, browse clips, edit, and share from your phone. Share highlights directly to TikTok, Discord, or anywhere else on the go. Outplayed is desktop-only with no mobile app and no cloud storage.',
-        image: '/compare/images/medal-mobile-combined.png',
+        image: '/images/medal-mobile-combined.png',
         imageAlt: 'Medal mobile app - browse clips, tap to clip, play any mobile game',
       },
       {
@@ -806,34 +806,34 @@ export const allComparisons: ComparisonPage[] = [
         title: 'Light-Speed Instant Replays Captured',
         content:
           'Medal lets you press F8 after a clutch 1v3 in <a href="https://medal.tv/games/cs2">CS2</a> or a ceiling shot in <a href="https://medal.tv/games/rocket-league">Rocket League</a> and the last 15 seconds are saved instantly. Insights is built for recording full sessions and reviewing VODs with a coach - not for quick highlight captures. Medal was purpose-built for the clip-and-share loop. <a href="https://medal.tv/features">See all Medal features</a>.',
-        video: '/compare/images/medal-instant-replay.mp4',
+        video: '/images/medal-instant-replay.mp4',
       },
       {
         title: 'Never Miss a Moment with Smart Auto-Clips',
         content:
           'Medal\'s <a href="https://medal.tv/auto-clipping">auto-clipping</a> saves your best plays in the background without any button press. Kills, aces, and clutch moments in <a href="https://medal.tv/games/valorant">Valorant</a>, <a href="https://medal.tv/games/fortnite">Fortnite</a>, <a href="https://medal.tv/games/apex-legends">Apex Legends</a>, <a href="https://medal.tv/games/cs2">CS2</a>, and <a href="https://medal.tv/games/call-of-duty-warzone">Call of Duty</a> are clipped before you are back in the lobby. Insights offers event-based bookmarks for later review, but does not create shareable clips automatically.',
-        image: '/compare/images/medal-auto-clip.png',
+        image: '/images/medal-auto-clip.png',
         imageAlt: 'Medal auto-clipping a kill in Apex Legends without pressing any button',
       },
       {
         title: 'Too Focused? Your Voice Is All You Need',
         content:
           'Just say "clip that" and Medal captures the moment instantly - hands-free and distraction-free. Perfect for intense ranked matches in <a href="https://medal.tv/games/valorant">Valorant</a> or <a href="https://medal.tv/games/fortnite">Fortnite</a> when your hands are busy. Insights does not offer voice-activated clipping.',
-        image: '/compare/images/medal-editor-demo.gif',
+        image: '/images/medal-editor-demo.gif',
         imageAlt: 'Medal voice command clipping a gaming highlight hands-free',
       },
       {
         title: 'Easily Edit and Share on All Platforms',
         content:
           'Medal gives you an instant link for every clip that embeds on Discord, TikTok, Reddit, and anywhere else - no file uploading, no compression. You can also follow friends, see their clips, and discover clips you are in. Insights focuses on full-session VOD review for coaching, not the quick clip-and-share workflow.',
-        video: '/compare/images/medal-share-clip.mp4',
+        video: '/images/medal-share-clip.mp4',
         embedUrl: 'https://medal.tv/games/valorant/clips/mkI53EXbBMVaS1bLn?theater=true',
       },
       {
         title: 'The Only Recorder with a Mobile App',
         content:
           'Medal has a full mobile app on iOS and Android so you can record mobile games, browse clips, edit, and share from your phone. Share highlights directly to TikTok, Discord, or anywhere else on the go. Insights is desktop-only with no mobile app.',
-        image: '/compare/images/medal-mobile-combined.png',
+        image: '/images/medal-mobile-combined.png',
         imageAlt: 'Medal mobile app - browse clips, tap to clip, play any mobile game',
       },
       {
