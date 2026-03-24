@@ -45,6 +45,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px !important;
 }
 
 body {
@@ -53,6 +54,7 @@ body {
   color: var(--color-medal-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
 }
 
 /* Accordion animation */
